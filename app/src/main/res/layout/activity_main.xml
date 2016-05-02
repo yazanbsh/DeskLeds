@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.yazan.deskleds.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn Leds on"
+        android:id="@+id/turnOnBtn"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn Leds Off"
+        android:id="@+id/turnoffBtn"
+        android:layout_alignBottom="@+id/turnOnBtn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:minWidth="200dp"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/turnOnBtn"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intensity"
+        android:textSize="18dp"
+        android:id="@+id/intensityTextView"
+        android:layout_below="@+id/seekBar"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reading Mode"
+        android:id="@+id/readModeBtn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="67dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Writing Mode"
+        android:id="@+id/writeModeBtn"
+        android:layout_alignTop="@+id/readModeBtn"
+        android:layout_alignLeft="@+id/turnoffBtn"
+        android:layout_alignStart="@+id/turnoffBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leds Color"
+        android:id="@+id/ledColorBtn"
+        android:layout_below="@+id/intensityTextView"
+        android:layout_alignRight="@+id/turnOnBtn"
+        android:layout_alignEnd="@+id/turnOnBtn"
+        android:layout_marginTop="28dp"
+        android:onClick="colorOnclickListner" />
+</RelativeLayout>
