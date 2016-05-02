@@ -25,4 +25,11 @@ public class SplashScreen extends AppCompatActivity {
         timerThread.start();
 
     }
+
+    @Override
+    protected void onPause() {
+        // TODO Auto-generated method stub
+        super.onPause();
+        finish();
+    }
 }
