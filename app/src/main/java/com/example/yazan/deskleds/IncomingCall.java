@@ -12,6 +12,7 @@ import android.widget.Toast;
  * Created by Yazan on 5/6/2016.
  */
 public class IncomingCall extends BroadcastReceiver {
+    Context context;
 
     public void onReceive(Context context, Intent intent) {
 
@@ -42,7 +43,7 @@ public class IncomingCall extends BroadcastReceiver {
 
                 String msg = "New Phone Call Event. Incomming Number : "+incomingNumber;
                 int duration = Toast.LENGTH_LONG;
-                Toast toast = Toast.makeText(pcontext, msg, duration);
+                Toast toast = Toast.makeText(context, msg, duration);
                 toast.show();
 
             }
