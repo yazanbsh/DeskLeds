@@ -20,12 +20,9 @@
         </activity>
         <activity android:name=".Colors" />
 
-        <receiver android:name=".PhonecallReceiver" >
-            <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+        <receiver android:name="IncomingCallInterceptor">                     <!-- 6 -->
+            <intent-filter>                                                   <!-- 7 -->
+                <action android:name="android.intent.action.PHONE_STATE"/>   <!-- 8 -->
             </intent-filter>
         </receiver>
 
